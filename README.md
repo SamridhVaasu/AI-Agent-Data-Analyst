@@ -177,55 +177,6 @@ classDiagram
     DataAnalyst --> GroqLLM: Uses for inference
 ```
 
-### Technical Stack Detail
-
-```mermaid
-graph TD
-    subgraph "Frontend"
-        ST[Streamlit]
-        STComp[Streamlit Components]
-    end
-
-    subgraph "Data Processing"
-        PD[Pandas]
-        NP[NumPy]
-        PDA[PandasAI]
-    end
-
-    subgraph "Model Interaction"
-        GRA[Groq API Client]
-        GRM[GroqLLM Adapter]
-    end
-
-    subgraph "Visualization"
-        PX[Plotly Express]
-        GO[Plotly Graph Objects]
-        MPL[Matplotlib]
-        SNS[Seaborn]
-    end
-
-    subgraph "Infrastructure"
-        ENV[Python-dotenv]
-        LOG[Logging]
-        IO[IO Handling]
-    end
-
-    ST --> PD
-    ST --> STComp
-    PD --> NP
-    PD --> PDA
-    PDA --> GRM
-    GRM --> GRA
-    ST --> PX
-    ST --> GO
-    PX --> MPL
-    GO --> MPL
-    MPL --> SNS
-    ST --> ENV
-    ST --> LOG
-    ST --> IO
-```
-
 ### Prompt Engineering
 
 The system employs sophisticated prompt engineering to achieve optimal results:
@@ -487,66 +438,6 @@ stateDiagram-v2
     
     InsightExtraction --> [*]: Display Results
 ```
-
-## 📈 Performance Optimization
-
-The system incorporates several performance optimization strategies:
-
-### Data Handling Optimizations
-
-- **Automatic Sampling**: For large datasets (>100K rows), stratified sampling maintains responsiveness
-- **Type-Based Processing**: Different analysis strategies for numerical vs categorical data
-- **Lazy Loading**: Data elements are processed on-demand rather than upfront
-
-### LLM Optimizations
-
-- **Token Optimization**: Prompts are carefully constructed to minimize token usage
-- **Context Pruning**: Only relevant data context is included in prompts
-- **Caching**: Similar queries leverage cached results to reduce API calls
-- **Batch Processing**: Related operations are grouped to minimize round-trips
-
-### UI Optimizations
-
-- **Progressive Loading**: Components load incrementally to improve perceived performance
-- **Asynchronous Processing**: Long-running operations run in background threads
-- **Response Streaming**: Results begin displaying as soon as they're available
-
-### Resource Requirements
-
-<div align="center">
-<table>
-  <tr>
-    <th>Dataset Size</th>
-    <th>Memory Usage</th>
-    <th>Response Time</th>
-    <th>Recommended Model</th>
-  </tr>
-  <tr>
-    <td>Small<br>(&lt;10K rows)</td>
-    <td>500MB-1GB</td>
-    <td>1-3 seconds</td>
-    <td>Any</td>
-  </tr>
-  <tr>
-    <td>Medium<br>(10K-100K rows)</td>
-    <td>1GB-2GB</td>
-    <td>3-8 seconds</td>
-    <td>Llama 3 8B<br>or Gemma 7B</td>
-  </tr>
-  <tr>
-    <td>Large<br>(100K-1M rows)</td>
-    <td>2GB-4GB</td>
-    <td>8-15 seconds</td>
-    <td>Llama 3.3 70B<br>or Mixtral 8x7B</td>
-  </tr>
-  <tr>
-    <td>Very Large<br>(&gt;1M rows)</td>
-    <td>4GB+</td>
-    <td>15+ seconds</td>
-    <td>Use data filtering<br>or sampling</td>
-  </tr>
-</table>
-</div>
 
 ## 🌐 Possible Use Cases
 
