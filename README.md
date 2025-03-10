@@ -8,7 +8,7 @@
 ![Groq](https://img.shields.io/badge/LLM-Groq-orange)
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-red)
 
-<img src="logo.png" alt="logo" width="120"/>
+<img src="logo.webp" alt="logo" width="120"/>
 <br/>
 <strong>A Modern AI-Powered Data Analysis Platform</strong>
 
