@@ -548,10 +548,6 @@ By using this system, you acknowledge that you understand its educational nature
 
 **For production applications, professional data analysis solutions with appropriate validation, security, and support should be used.**
 
-## 📝 License
-
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
-
 ## 🙏 Acknowledgements
 
 - Groq for providing high-performance LLM inference
@@ -561,6 +557,4 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 ## 📧 Contact
 
-Project Maintainer - [your-email@example.com](mailto:your-email@example.com)
-
-Project Link: [https://github.com/yourusername/ai-data-analyst](https://github.com/yourusername/ai-data-analyst) 
+Project Maintainer - [samridh@iiotengineers.com](mailto:samridh@iiotengineers.com)
